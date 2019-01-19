@@ -90,12 +90,11 @@ console.log(largeShirts);
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal array and log the result
 let ticketPriceTotal = [];
 const tax = runners.reduce(function (accumulator, currentValue) {
-    return accumulator + currentValue;
-    ticketPriceTotal.push(tax);
+return {donation: accumulator.donation + currentValue.donation};
+
 })
-
+ticketPriceTotal.push(tax);
 console.log(ticketPriceTotal);
-
 
 
 // ==== Challenge 5: Be Creative ====
@@ -103,6 +102,21 @@ console.log(ticketPriceTotal);
 
 // Problem 1
 
+let mediumShirts = [];
+const ordermedium = runners.filter(medium => {
+    if (medium.shirt_size === 'M') {
+        mediumShirts.push(medium)
+    }
+})
+console.log(mediumShirts);
+
 // Problem 2
+
+let companyName = [];
+runners.forEach(function (company) {
+    let i = company.last_name + " works for " + company.company_name;
+    companyName.push(i)
+})
+console.log(companyName);
 
 // Problem 3

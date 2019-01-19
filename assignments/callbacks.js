@@ -68,7 +68,7 @@ function contains(item, list, cb) {
   // Pass true to the callback if it is, otherwise pass false.
   cb(list.includes(item))
  }	
- contains('rock', items, console.log)
+ contains('yo-yo', items, console.log)
 
 
 /* STRETCH PROBLEM */
